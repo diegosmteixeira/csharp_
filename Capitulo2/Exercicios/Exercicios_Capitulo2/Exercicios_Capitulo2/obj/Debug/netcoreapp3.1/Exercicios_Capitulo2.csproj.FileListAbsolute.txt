@@ -1,0 +1,13 @@
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.csprojAssemblyReference.cache
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.AssemblyInfo.cs
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\bin\Debug\netcoreapp3.1\Exercicios_Capitulo2.exe
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\bin\Debug\netcoreapp3.1\Exercicios_Capitulo2.deps.json
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\bin\Debug\netcoreapp3.1\Exercicios_Capitulo2.runtimeconfig.json
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\bin\Debug\netcoreapp3.1\Exercicios_Capitulo2.runtimeconfig.dev.json
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\bin\Debug\netcoreapp3.1\Exercicios_Capitulo2.dll
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\bin\Debug\netcoreapp3.1\Exercicios_Capitulo2.pdb
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.dll
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.pdb
+C:\Users\PC\Documents\Csharp\Capitulo2\Exercicios\Exercicios_Capitulo2\Exercicios_Capitulo2\obj\Debug\netcoreapp3.1\Exercicios_Capitulo2.genruntimeconfig.cache
