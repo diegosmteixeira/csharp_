@@ -6,6 +6,11 @@ namespace Secao4
 {
     class Program
     {
+        /*
+        O valor de Pi deve ser estático, pois vai ser usado em outra função de mesma classe que também é estática
+        static double Pi = 3.14;
+        */
+
         static void Main(string[] args)
 
         {
@@ -80,7 +85,7 @@ namespace Secao4
             Console.WriteLine("Area = " + r1.Area().ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Perimetro = " + r1.Perimetro().ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Diagonal = " + r1.Diagonal().ToString("F2", CultureInfo.InvariantCulture));
-            */
+            
 
             //----------------------------------------------------------------------------------------//
 
@@ -105,7 +110,27 @@ namespace Secao4
             Console.WriteLine();
 
             Console.WriteLine("Informações atualizadas: " + f1);
+            */
 
+            //----------------------------------------------------------------------------------------//
+
+            Console.WriteLine("Programa para trabalhar com membros estáticos realizando cálculos de uma circunferência: ");
+            Console.WriteLine("------------------------------");
+            Console.WriteLine();
+
+            Console.WriteLine("Entre com o valor do raio da circunferência");
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double circ = Calculadora.Circunferencia(raio);
+            double volume = Calculadora.Volume(raio);
+
+            Console.WriteLine("Circunferência: " + circ.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Volume: " + volume.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor de PI: " + Calculadora.Pi.ToString("F2", CultureInfo.InvariantCulture));
+
+            /*
+             * O cálculo independe de instânciar um objeto. Direto com o nome da classe e passando um valor do raio
+             * já é possível obter os valores do Volume, Circunferencia e Pi.
+             */
         }
     }
 }
