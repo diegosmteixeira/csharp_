@@ -14,7 +14,7 @@ namespace Capitulo2
             x = new Triangulo();
 
             Console.WriteLine("Programa para calcular a area do Triangulo X com duas casas decimais:");
-            System.Console.WriteLine("------------------------------");
+            Console.WriteLine("------------------------------");
             Console.WriteLine("Entre com as medida do primeiro lado");
             x.A = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine("Entre com as medida do segundo lado");
@@ -26,12 +26,15 @@ namespace Capitulo2
             double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
 
             Console.WriteLine("A área do triangulo informado é " + areaX.ToString("F4", CultureInfo.InvariantCulture));
-            */
+            
 
             //----------------------------------------------------------------------------------------//
 
+            
             Produto p = new Produto();
 
+            Console.WriteLine("Programa para adicionar ou remover produtos de um Estoque: ");
+            Console.WriteLine("------------------------------");
             Console.WriteLine("Entre com os dados do produto: ");
             Console.WriteLine("Nome: ");
             p.Nome = Console.ReadLine();
@@ -57,10 +60,26 @@ namespace Capitulo2
 
             Console.WriteLine();
             Console.WriteLine("Dados atualizados: " + p);
+            */
 
+            //----------------------------------------------------------------------------------------//
 
+            Console.WriteLine("Programa para ler os valores da largura e altura de um retângulo: ");
+            Console.WriteLine("------------------------------");
+            
+            Retangulo r1 = new Retangulo(); 
 
+            Console.WriteLine("Digite a largura do retângulo: ");
+            r1.Largura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine();
 
+            Console.WriteLine("Digite a altura do retângulo: ");
+            r1.Altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            Console.WriteLine("Area = " + r1.Area().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Perimetro = " + r1.Perimetro().ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Diagonal = " + r1.Diagonal().ToString("F2", CultureInfo.InvariantCulture));
 
         }
     }
