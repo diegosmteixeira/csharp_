@@ -1,0 +1,27 @@
+Namespace = agrupamento LÓGICO de classes relacionadas (build).
+
+	- [Entities] ->  (Class1, Class2, Class3)
+		Entidades de Negócio e os dados que o sistema deve armazenar.
+		Ex: Produto, Clientes, etc.
+
+	- [Services]  ->  (Class1, Class2, Class3)
+		Serviços do sistema.
+
+	- [Repositories]  ->  (Class1, Class2, Class3)
+		Classes que acessam os dados
+
+
+Assembly (DLL ou EXE) = Agrupamento FÍSICO de classes relacionadas (build).
+	Assembly Financial
+		Entities
+		Services
+		Repositories
+	Assembly Graphics
+		Graphics3D
+		Graphics2D
+		Utilites
+
+Aplicação = Agrupamento de assemblies relacionados
+
+	Aplicação ~ Solution
+	Assemlby ~ Project (varios projetos dentro da aplicação)

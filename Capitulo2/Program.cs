@@ -9,6 +9,7 @@ namespace Capitulo2
         static void Main(string[] args)
 
         {
+            /*
             Triangulo x;
             x = new Triangulo();
 
@@ -25,6 +26,42 @@ namespace Capitulo2
             double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
 
             Console.WriteLine("A área do triangulo informado é " + areaX.ToString("F4", CultureInfo.InvariantCulture));
+            */
+
+            //----------------------------------------------------------------------------------------//
+
+            Produto p = new Produto();
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.WriteLine("Nome: ");
+            p.Nome = Console.ReadLine();
+            Console.WriteLine("Preço: ");
+            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Quantidade no estoque: ");
+            p.Quantidade = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Dados do produto: " + p);
+            Console.WriteLine();
+
+            Console.Write("Digite o número de produtos a ser adicionado ao Estoque: ");
+            int qte = int.Parse(Console.ReadLine());
+            p.AdicionarProdutos(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+            Console.WriteLine();
+
+            Console.Write("Digite o número de produtos a ser removido do Estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + p);
+
+
+
+
+
         }
     }
 }
