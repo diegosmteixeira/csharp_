@@ -1,0 +1,3 @@
+Capitulo 2 teve o nome alterado para Secao 4 (estrutura de nomes do curso)
+
+Preservei a pasta para preservar os commits já realizados para futuro estudo.
