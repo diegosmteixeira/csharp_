@@ -60,7 +60,7 @@ namespace Capitulo2
 
             Console.WriteLine();
             Console.WriteLine("Dados atualizados: " + p);
-            */
+            
 
             //----------------------------------------------------------------------------------------//
 
@@ -80,6 +80,31 @@ namespace Capitulo2
             Console.WriteLine("Area = " + r1.Area().ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Perimetro = " + r1.Perimetro().ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Diagonal = " + r1.Diagonal().ToString("F2", CultureInfo.InvariantCulture));
+            */
+
+            //----------------------------------------------------------------------------------------//
+
+            Funcionario f1 = new Funcionario();
+
+            Console.WriteLine("Programa para visualizar os dados de um funcionário: ");
+            Console.WriteLine("------------------------------");
+            Console.Write("Nome: ");
+            f1.Nome = Console.ReadLine();
+            Console.Write("Salario Total (sem descontos): "); 
+            f1.SalarioBruto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Imposto sobre a Renda: ");
+            f1.Imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine();
+
+            Console.WriteLine("Nome e salário do funcionário: " + f1);
+            Console.WriteLine();
+
+            Console.Write("Qual a porcentagem de aumento do salário?");
+            double porcentagem = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            f1.AumentarSalario(porcentagem);
+            Console.WriteLine();
+
+            Console.WriteLine("Informações atualizadas: " + f1);
 
         }
     }
