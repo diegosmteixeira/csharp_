@@ -1,0 +1,20 @@
+
+Modificadores de acesso para classes:
+
+	. Acesso por qualquer classe:
+	
+		public class Product {}
+
+
+	. Acesso somente dentro do assembly - classes dentro do mesmo projeto:
+
+		internal class Product{}
+
+		class Product {}
+
+
+	. Acesso somente pela classe-mãe:
+
+		private class Product{}
+
+		Nota: classe aninhada, por padrão, é private.

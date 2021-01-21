@@ -1,0 +1,50 @@
+
+Modificadores de Acesso para MEMBROS:
+[public] _acessado por:
+
+	- própria classe
+	- subclasses no assembly
+	- classes do assembly
+	- subclasses fora do assembly
+	- classes fora do assembly
+
+
+[protected internal] _acessado por:
+
+	- própria classe
+	- subclasses no assembly
+	- classes do assembly
+	- subclasses fora do assembly
+	(uma classe de outro projeto não pode acessar um membro protected internal)
+
+	[exceto]: caso seja uma subclasse de outro projeto pode acessar um membro protected internal.
+
+
+[internal] _acessado por:
+
+	- própria classe
+	- subclasses no assembly
+	- classes do assembly
+	(somente classes internas do projeto)
+
+
+[protected] _acessado por:
+
+	- própria classe
+	- subclasses no assembly
+
+	- subclasses fora do assembly
+	(sempre que for subclasse acessa o protected)
+
+
+[private protected] _acessado por:
+
+	- própria classe
+	- subclasses no assembly
+
+
+[private] _acessado por:
+	
+	- apenas pela própria classe
+
+	*É o nível mais restrito de acesso.
