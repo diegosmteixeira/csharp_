@@ -15,3 +15,7 @@ Opção 1: implementação manual
 	.Implementa-se métodos Get e Set para cada atributo, conforme regras de negócio
 
 	.[Nota]: não é usuial na plataforma C# - Conceito de Properties
+
+
+
+[private] = por convenção em C# todo atributo private é nomeado com _underline no início
