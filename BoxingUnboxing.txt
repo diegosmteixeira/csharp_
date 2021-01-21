@@ -1,0 +1,26 @@
+
+[Boxing]
+
+	.É o processo de conversão de um objeto tipo valor para 
+	um objeto tipo referência compatível.
+
+		int x = 20
+		Object obj = x; //tipo object é um tipo referência que aceita qualquer tipo valor
+
+
+		-> a variável obj passa a ser uma referência na memória Stack 
+		para um objeto instanciado na memória Heap
+
+		embora isso seja possível gera um custo de processamento.
+
+
+[Unboxing]
+
+	.É o processo de conversão de um objeto tipo referência para
+	um objeto tipo valor compatível.
+
+		int y = 30;
+		Object obj2 = y;
+		int z = (int) obj;
+
+		-> com essa atribuição a variável recebe o valor do objeto que estava na memória Heap

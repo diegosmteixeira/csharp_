@@ -1,0 +1,33 @@
+
+[Listas]
+
+	.Lista é uma estrutura de dados:
+
+		- Homogênea (dados do mesmo tipo)
+		- Ordenada (elementos acessados por meio de posições)
+		- Inicia vazia, e seus elementos são alocados sob demanda
+		- Cada elemento ocupa um "nó" (ou nodo) da lista
+			cada nodo aponta para o próximo
+
+	.Classe: List
+	.Namespace: System.Collections.Generic
+
+	.Vantagens:
+
+		- Tamanho variável
+		- Facilidade para se realizar inserções e deleções
+
+		*Ao contrário dos vetores não é necessário inicializar valores ao instanciar uma lista
+
+	.Desvantagens:
+
+		- Acesso sequencial aos elementos (vai percorrer um por um até chegar no elemento informado)
+		- Nos vetores o acesso é direto
+
+
+
+	    //Instanciar uma lista:
+            List<string> list = new List<string>();
+
+            //Instanciar já passando elementos:
+            List<string> list2 = new List<string> { "Maria", "Alex" };

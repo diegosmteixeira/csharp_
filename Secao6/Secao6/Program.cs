@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace Secao6
@@ -134,6 +135,7 @@ namespace Secao6
             }
             */
 
+            /*
             //Modificador de parâmetros: [params]
 
             int result = Calculator.Sum(10, 20, 30, 40);
@@ -156,7 +158,141 @@ namespace Secao6
             int triple;
             Calculator.TripleOut(b, out triple); //a diferença é que a variável triple não precisou ser iniciada, pois é uma variável de saída.
             Console.WriteLine(triple);
+            */
 
+            //Instanciar uma lista:
+            List<string> list = new List<string>();
+
+            //Instanciar já passando elementos:
+            List<string> list2 = new List<string> { "Maria", "Alex" };
+
+            List<string> list3 = new List<string>();
+
+            //Comando Add - Adiciona por padrão ao final da lista
+            Console.WriteLine("Nomes adicionados na lista - (Add):");
+            Console.WriteLine("-------------------------");
+            
+
+            list.Add("Pablo");
+            list.Add("Joao");
+            list.Add("Fabio");
+            list.Add("Felipe");
+            list.Add("Fritz");
+
+
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+            Console.WriteLine();
+
+            //Comando Insert - Adiciona na posição referenciada
+            list.Insert(2, "Marco");
+
+            Console.WriteLine("Nome inserido na lista - (Insert):");
+            Console.WriteLine("-------------------------");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Buscando elementos na lista: ");
+            Console.WriteLine("-------------------------");
+
+            //Comando Count - Conta o número dos elementos da lista
+            Console.WriteLine("List count - (Count): " + list.Count);
+
+            //Comando Find - Encontra a primeira ocorrência que satisfaça um predicado
+            string s1 = list.Find(x => x[0] == 'F');  //expressão lambda
+            Console.WriteLine("First 'F' - (Find): " + s1);
+
+            //Comando FindLast - Encontra a última ocorrência que satisfaça um predicado
+            string s2 = list.FindLast(x => x[0] == 'F');
+            Console.WriteLine("Last 'F' - (FindLast): " + s2);
+
+            //Comando FindIndex - Encontra a primeira posição que satisfaça um predicado
+            int pos1 = list.FindIndex(x => x[0] == 'F');
+            Console.WriteLine("First position 'F' - (FindIndex): " + pos1);
+
+            //Comando FindLastIndex - Encontra a última posição que satisfaça um predicado
+            int pos2 = list.FindLastIndex(x => x[0] == 'F');
+            Console.WriteLine("Last position 'F'- (FindLastIndex): " + pos2);
+            Console.WriteLine();
+
+            //Comando FindAll - Filtra a lista com base em um predicado (cria uma nova lista contendo somente os elementos que satisfaçam o predicado)
+            List<string> list4 = list.FindAll(x => x.Length == 5);
+            Console.WriteLine("Lista filtrada com os nomes que possuem 5 caracteres - (FindAll): ");
+            Console.WriteLine("-------------------------");
+            foreach (string obj in list4)
+            {
+                Console.WriteLine(obj);
+            }
+
+            //Comando Remove - espera como parâmetro uma string
+            list4.Remove("Fabio");
+            Console.WriteLine();
+
+            Console.WriteLine("Removendo 'Fabio' - (Remove): "); //caso o nome passado esteja incorreto ele simplesmente não remove
+            Console.WriteLine("-------------------------");
+            foreach (string obj in list4)
+            {
+                Console.WriteLine(obj);
+            }
+
+            //Comando RemoveAll - remove os elementos de uma lista de acordo com um predicado
+            list4.RemoveAll(x => x[0] == 'F');
+            Console.WriteLine();
+
+            Console.WriteLine("Removendo todos que começam com 'F' - (RemoveAll): ");
+            Console.WriteLine("-------------------------");
+
+            foreach (string obj in list4)
+            {
+                Console.WriteLine(obj);
+            }
+
+            //Comando RemoveAt - remove o elemento pela posição dele
+            list4.RemoveAt(1);
+
+            Console.WriteLine();
+            Console.WriteLine("Removendo elemento da posicao 1 - (RemoveAt): ");
+            Console.WriteLine("-------------------------");
+
+            foreach (string obj in list4)
+            {
+                Console.WriteLine(obj);
+            }
+            Console.WriteLine();
+
+            //
+            Console.WriteLine("Nomes adicionados novamente na lista - (Add):");
+            Console.WriteLine("-------------------------");
+
+
+            list4.Add("Pablo");
+            list4.Add("Joao");
+            list4.Add("Fabio");
+            list4.Add("Felipe");
+            list4.Add("Fritz");
+
+
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+            Console.WriteLine();
+
+            //Comando RemoveRange - remove os elementos por uma faixa
+            list4.RemoveRange(2, 3);
+
+            Console.WriteLine("Removendo elementos de uma 'faixa' da lista - (RemoveRange):");
+            Console.WriteLine("-------------------------");
+
+            foreach (string obj in list4)
+            {
+                Console.WriteLine(obj);
+            }
         }
     }
 }
