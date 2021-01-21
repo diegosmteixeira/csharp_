@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Secao6
 {
@@ -25,7 +22,7 @@ namespace Secao6
             Console.WriteLine(p);
 
             //Conclusão: Mesmo sendo um tipo struct deve-se inicializar (ou colocando valores, ou fazendo new).
-            */
+            
 
 
             //Declarando variáveis nulas (de valor opcional):
@@ -44,7 +41,7 @@ namespace Secao6
             Console.WriteLine(y.HasValue);
 
             //pegar valor diretamente
-            /*Console.WriteLine(x.Value);*/ //lança uma exceção se você utilizá-la a partir de um nullable
+            /*Console.WriteLine(x.Value); //lança uma exceção se você utilizá-la a partir de um nullable
             Console.WriteLine(y.Value);
 
             //testando com condições:
@@ -74,7 +71,66 @@ namespace Secao6
             double k = z ?? 20.0;
 
             Console.WriteLine(k);
+            */
 
+            /*
+            Console.WriteLine("Digite o tamanho da Lista de pesssoas: ");
+            int n = int.Parse(Console.ReadLine());
+
+            //Criando um vetor na memória
+            double[] vect = new double[n];
+
+            //Inserindo dados no vetor
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Digite a altura da " + (i + 1) + " pessoa: ");
+                vect[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+
+            double sum = 0.0;
+            for (int i = 0; i < n; i++)
+            {
+                sum += vect[i];
+            }
+
+            double avg = sum / n;
+
+            Console.WriteLine("AVERAGE HEIGHT = " + avg.ToString(), CultureInfo.InvariantCulture);
+            */
+
+            //Diferença Vetor do tipo classe vs Vetor do tipo struct:
+            Console.Write("Digite a quantidade de produtos: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Product[] vect = new Product[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Digite o nome do " + (i+1) + " produto: ");
+                string name = Console.ReadLine();
+                Console.Write("Digite o preço do " + (i+1) + " produto: ");
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                vect[i] = new Product { Name = name, Price = price };
+                Console.WriteLine();
+            }
+
+            double sum = 0.0;
+            for(int i = 0; i < n; i++)
+            {
+                sum += vect[i].Price;
+            }
+
+            double avg = sum / n;
+            Console.WriteLine("AVERAGE PRICE = " + avg.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine();
+            Console.WriteLine("Produtos registrados: ");
+            for(int i = 0; i < n; i++)
+            {
+                Console.Write(vect[i].Name + " R$ ");
+                Console.Write(vect[i].Price.ToString("F2", CultureInfo.InvariantCulture));
+                Console.WriteLine();
+            }
         }
     }
 }
