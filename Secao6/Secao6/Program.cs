@@ -98,6 +98,7 @@ namespace Secao6
             Console.WriteLine("AVERAGE HEIGHT = " + avg.ToString(), CultureInfo.InvariantCulture);
             */
 
+            /*
             //Diferença Vetor do tipo classe vs Vetor do tipo struct:
             Console.Write("Digite a quantidade de produtos: ");
             int n = int.Parse(Console.ReadLine());
@@ -131,6 +132,31 @@ namespace Secao6
                 Console.Write(vect[i].Price.ToString("F2", CultureInfo.InvariantCulture));
                 Console.WriteLine();
             }
+            */
+
+            //Modificador de parâmetros: [params]
+
+            int result = Calculator.Sum(10, 20, 30, 40);
+            Console.WriteLine(result);
+
+
+            //Modificador de parâmetro: [ref]
+
+            int a = 10;
+            Calculator.Triple(a); //não funciona pois a variável x apenas existe no próprio escopo.
+            Console.WriteLine(a);
+
+            Calculator.TripeRef(ref a); //aqui funciona pois a variável local x muda o valor de a como referência.
+            Console.WriteLine(a);
+
+
+            //Modificador de parâmetro: [out]
+            
+            int b = 10;
+            int triple;
+            Calculator.TripleOut(b, out triple); //a diferença é que a variável triple não precisou ser iniciada, pois é uma variável de saída.
+            Console.WriteLine(triple);
+
         }
     }
 }
