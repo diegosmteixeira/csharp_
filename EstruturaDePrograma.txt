@@ -1,3 +1,5 @@
+[Estrutura de uma programa]:
+
 Namespace = agrupamento LÓGICO de classes relacionadas (build).
 
 	- [Entities] ->  (Class1, Class2, Class3)

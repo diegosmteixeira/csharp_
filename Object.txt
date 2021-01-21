@@ -1,9 +1,15 @@
 ** Toda classe em C# é uma subclasse da classe Object **
 
 - Object possui os seguintes métodos:
+
 	. GetType - retorna o tipo do objeto
+
 	. Equals - compara se o objeto é igual a outro
+
 	. GetHashCode - retorna um código hash do objeto
+
 	. ToString - converte o objeto para string
 		(Se dentro da sua classe você implementar o método ToString
 		você pode definir como o objeto será representado na forma de string).
+
+
