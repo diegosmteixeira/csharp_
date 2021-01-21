@@ -1,0 +1,8 @@
+
+Ordem sugerida para implementação de membros de classe:
+
+1. atributos privativos
+2. propriedades auto implementadas
+3. construtores
+4. propriedades customizadas
+5. outros métodos (incluindo ToString)
