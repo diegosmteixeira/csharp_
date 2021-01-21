@@ -1,0 +1,32 @@
+
+Palavra this
+
+	.É uma referência para o próprio objeto
+
+	.Usos comuns:
+
+		-Diferenciar atributos de variáveis locais(Java) - por conta do padrão Camel Case
+
+			public Produto(string Nome, double Preco)
+			{
+				this.Nome = Nome;
+				this.Preco = Preco;
+			}
+
+		-Referenciar outro construtor em um construtor | com o this() referencia o construtor padrão
+			caso vá referênciar outro construtor você passa os parâmetros dentro do this()
+
+			public Produto(string Nome, double Preco) : this()
+			{
+				this.Nome = Nome;
+				this.Preco = Preco;
+			}
+
+		-Passa o próprio objeto como argumento na chamada de um método ou construtor
+
+			class ChessMatch
+			{
+				PlaceNewPiece('e', 1, new King(board, Color.White, this));
+			}
+
+			//nesse this o próprio objeto da classe é passado como argumento.
