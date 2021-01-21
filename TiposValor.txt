@@ -1,0 +1,23 @@
+
+[Structs são tipos valor]
+
+	. A linguagem C# possui também tipos valor, que são os "structs".
+	. Structs são CAIXAS e não ponteiros.
+
+	double x, y;
+		
+		-> na memória Stack x e y são "caixinhas" que vão armazenar números double
+
+	x = 10;
+
+		-> a "caixinha" x na memória Stack vai conter o valor 10.
+
+	y = x;
+
+		-> "y recebe uma CÓPIA de x"
+		-> nesse caso x = 10 e y = 10.
+
+Em C# os tipos valor são os tipos básicos:
+	double, float, decimal, char, bool, ulong, uint, ushort, byte, long, int, short, sbyte
+
+	outros structs importantes: DateTime, TimeSpan.

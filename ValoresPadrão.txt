@@ -1,0 +1,13 @@
+
+[Valores padrão]
+
+	. Quando alocamos (new) qualquer tipo estruturado (classe, struct, array),
+	são atribuídos valores padrão para os seus elementos.
+
+		- números: 0
+		- bool: False
+		- char: caractere código 0 (não é o caractere dígito zero, mas sim o código mesmo)
+		- objeto: null
+
+	. Lembrando: uma variável apenas declarada, mas não instanciada, inicia em estado "não atribuída",
+	e o próprio compilador não permite que ela seja acessada.

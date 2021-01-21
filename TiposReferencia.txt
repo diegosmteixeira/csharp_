@@ -1,0 +1,39 @@
+
+[Classes são tipos referência]
+
+	.Variáveis cujo tipo são classes não devem ser entendidas como caixas,
+	mas sim "tentáculos" (ponteiros) para caixas.
+
+
+	. Product p1, p2;
+
+		-> cria duas variáveis na memória Stack
+		-> a variável p1 é um ponteiro que vai apontar para um objeto na memória heap quando ele for instanciado
+
+	
+	. p1 = new Product("TV", 900.00, 0);
+
+		-> nesse momento o objeto instanciado terá um endereço de memória
+		-> na variável p1 terá o endereço de onde está localizado o objeto na memória Heap
+
+
+	. p2 = p1;
+		
+		-> ao fazer o p2 receber p1 o que acontece é que p2 passa a apontar para onde p1 apontava
+		-> tanto p1 e p2 estarão na memória Stack
+		-> tanto p1 e p2 possuem um mesmo endereço da memória Heap
+
+
+
+[Valor "null"]
+		
+	.Tipos referência aceitam o valor "null", que indica que a variável aponta para ninguém
+
+	Product p1, p2;
+	p1 = new Product("TV", 900.00, 0);
+
+	
+	p2 = null;
+
+		-> nesse caso a linguagem estabele um valor para p2 que visa dizer que a variável não aponta para ninguém.
+		-> normalmente esse valor é 0

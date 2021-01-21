@@ -1,0 +1,7 @@
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\bin\Debug\Secao6.exe.config
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\bin\Debug\Secao6.exe
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\bin\Debug\Secao6.pdb
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\obj\Debug\Secao6.csprojAssemblyReference.cache
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\obj\Debug\Secao6.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\obj\Debug\Secao6.exe
+C:\Users\PC\Documents\Csharp\Secao6\Secao6\obj\Debug\Secao6.pdb
