@@ -160,6 +160,7 @@ namespace Secao6
             Console.WriteLine(triple);
             */
 
+            /*
             //Instanciar uma lista:
             List<string> list = new List<string>();
 
@@ -293,6 +294,72 @@ namespace Secao6
             {
                 Console.WriteLine(obj);
             }
+            */
+
+            /*
+            //Instanciar uma matriz de 2 linhas e 3 colunas
+            double[,] mat = new double[2, 3];
+
+            //Tamanho da Matriz
+            Console.WriteLine("Tamanho da matriz: " + mat.Length);
+            Console.WriteLine();
+
+            //Primeira dimensão da matriz (quantidade de linhas).
+            Console.Write("Tamanho da primeira dimensão da matriz (quantidade de linhas): " + mat.Rank);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            //Retorna o tamanho da primeira dimensão da matriz (linhas)
+            Console.Write("Tamanho da primeira dimensão da matriz: ");
+            Console.WriteLine(mat.GetLength(0));
+            Console.WriteLine();
+
+            //Retorna o tamanho da primeira dimensão (colunas)
+            Console.Write("Tamanho da segunda dimensão da matriz: ");
+            Console.WriteLine(mat.GetLength(1));
+            Console.WriteLine();
+            Console.WriteLine();
+
+            */
+
+            //Criar uma matriz quadrada n x n
+            Console.WriteLine("Digite o número correspondente ao tamanho da matriz: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[,] mat = new int[n, n];
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Digite a linha " + (i+1) + "ª da matriz separando os elementos por espaços: ");
+                string[] values = Console.ReadLine().Split(' ');
+
+                for (int j = 0; j < n; j++)
+                {
+                    mat[i, j] = int.Parse(values[j]);
+                }
+            }
+
+            //Calcular a diagonal principal
+            Console.Write("Main diagonal: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(mat[i,i] + " ");
+            }
+            Console.WriteLine();
+
+            //Calcular se há números negativos dentro da matriz
+            int count = 0;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (mat[i,j] < 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine("Negative number: " + count);
         }
     }
 }
