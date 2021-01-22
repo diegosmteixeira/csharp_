@@ -1,0 +1,14 @@
+
+[TimeSpan]
+
+	.Enquanto o DateTime representa um instante..
+	.O TimeSpan representa uma DURAÇÃO!
+	.É um tipo valor (struct)
+
+    [Representação Interna]
+
+	.Um objeto TimeSpan internamente armazena uma duração na forma de ticks(100 nanosegundos)
+
+	TimeSpan t1 = new TimeSpan(0, 1, 30);
+	Console.WriteLine(t1);
+	Console.WriteLine(t1.Ticks);

@@ -79,7 +79,7 @@ namespace Secao_7
             Console.WriteLine();
             */
 
-
+            /*
             //DateTime
             DateTime d = DateTime.Now;
 
@@ -132,6 +132,68 @@ namespace Secao_7
 
             DateTime d12 = DateTime.ParseExact("15/08/2000 13:05:58", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
             Console.WriteLine("ParseExact com hora: " + d12);
+            */
+
+
+            //TimeSpan é utilizado para calcular Multas, Juros, etc
+
+            //TimeSpan
+            TimeSpan t = new TimeSpan(0, 1, 30);
+
+            Console.WriteLine("TimeSpan: " + t);
+            Console.WriteLine("t1.Ticks: " + t.Ticks);
+
+            //Construtores do TimeSpan
+            TimeSpan t1 = new TimeSpan();
+            TimeSpan t2 = new TimeSpan(900000000L);
+            TimeSpan t3 = new TimeSpan(2, 11, 21);
+            TimeSpan t4 = new TimeSpan(4, 2, 11, 21);
+            TimeSpan t5 = new TimeSpan(4, 2, 11, 21, 321);
+
+            //Construtor vazio
+            Console.WriteLine("Construtor vazio: " + t1);
+
+            //Passando um número de ticks no construtor
+            Console.WriteLine("Passando ticks no construtor: " + t2);
+
+            //Passando horas no TimeSpan
+            Console.WriteLine("Passando horas: " + t3);
+
+            //Passando dias no TimeSpan
+            Console.WriteLine("Passando também dias: " + t4);
+
+            //Passando milissegundos no TimeSpan
+            Console.WriteLine("Passando também milissegundos: " + t5);
+
+
+            //Instanciar TimeSpan com Métodos.From
+            TimeSpan f1 = TimeSpan.FromDays(1.5);
+            TimeSpan f2 = TimeSpan.FromHours(1.5);
+            TimeSpan f3 = TimeSpan.FromMinutes(1.5);
+            TimeSpan f4 = TimeSpan.FromSeconds(1.5);
+            TimeSpan f5 = TimeSpan.FromMilliseconds(1);
+            TimeSpan f6 = TimeSpan.FromTicks(900000000L);
+
+
+
+            //TimeSpan de dias
+            Console.WriteLine("TimeSpan.FromDays: " + f1);
+
+            //TimeSpan de horas
+            Console.WriteLine("TimeSpan.FromHours: " + f2);
+
+            //TimeSpan de minutos
+            Console.WriteLine("TimeSpan.FromMinutes: " + f3);
+
+            //TimeSpan de segundos
+            Console.WriteLine("TimeSpan.FromSeconds: " + f4);
+
+            //TimeSpan de milissegundos
+            Console.WriteLine("TimeSpan.FromMilliseconds: " + f5);
+
+            //TimeSpan de Ticks (menor unidade - aceita apenas números Long)
+            Console.WriteLine("TimeSpan.FromTicks: " + f6 + " como o Tick é a menor unidade, não pode ser quebrado - logo esse método aceita números Long");
+            Console.WriteLine();
 
         }
     }
