@@ -1,0 +1,21 @@
+
+[switch-case]
+
+	.Estrutura opcional a vários if-else encadeados, quando a condição
+	envolve o teste do valor de uma variável.
+
+
+	var minhaVariavel = (...);
+
+	switch (minhaVariavel)
+	{
+		case 1:
+			Console.WriteLine("Caso 1");
+			break;
+		case2:
+			Console.WriteLine("Caso 2");
+			break;
+		default:
+			Console.WriteLine("Caso padrão");
+			break;
+	}
