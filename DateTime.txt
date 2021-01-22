@@ -1,0 +1,33 @@
+
+
+[DateTime]
+
+	.Representa um INSTANTE
+	.É um tipo valor(struct)
+
+	.Um objeto DateTime internamente armazena:
+
+		- O número de "ticks" (100 nanosegundos) desde a meia noite
+		do dia 1 de janeiro do ano 1 da era comum.
+
+	DateTime d1 = DateTime.Now;
+	Console.WriteLine(d1);
+	Console.WriteLine(d1.Ticks);
+
+
+    [Instanciação]
+
+	.Construtores
+
+		- DateTime(ano, mes, dia)
+		- DateTime(ano, mes, dia, hora, minuto, segundo) [opcional: kind]
+		- DateTime(ano, mes, dia, hora, minuto, segundo, milissegundo) [opcional: kind]
+
+	.Builders
+
+		- DateTime.Now
+		- DateTime.UtcNow
+		- DateTime.Today [time: 00:00:00]
+		- DateTime.Parse(string)
+		- DateTime.ParseExact(string, string)
+	
