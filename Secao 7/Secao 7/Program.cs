@@ -134,7 +134,7 @@ namespace Secao_7
             Console.WriteLine("ParseExact com hora: " + d12);
             */
 
-
+            /*
             //TimeSpan é utilizado para calcular Multas, Juros, etc
 
             //TimeSpan
@@ -194,7 +194,72 @@ namespace Secao_7
             //TimeSpan de Ticks (menor unidade - aceita apenas números Long)
             Console.WriteLine("TimeSpan.FromTicks: " + f6 + " como o Tick é a menor unidade, não pode ser quebrado - logo esse método aceita números Long");
             Console.WriteLine();
+            */
 
+
+            //Propriedades e operações com DateTime
+
+            //Propriedades
+            DateTime d = new DateTime(2001, 8, 15, 13, 45, 58, 275);
+
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Propriedades de um DateTime:");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("   DateTime d = " + d);
+            Console.WriteLine();
+            Console.WriteLine("1) Date:        " + d.Date); //Imprimimindo data e desconsiderando horário
+            Console.WriteLine("2) Day:         " + d.Day); //Imprime o dia
+            Console.WriteLine("3) DayOfWeek:   " + d.DayOfWeek); //Imprime dia da semana
+            Console.WriteLine("4) DayOfYear:   " + d.DayOfYear); //Imprime dia do ano
+            Console.WriteLine("5) Hour:        " + d.Hour);
+            Console.WriteLine("6) Kind:        " + d.Kind); //por padrão identifica local
+            Console.WriteLine("7) Millisecond: " + d.Millisecond);
+            Console.WriteLine("8) Minute:      " + d.Minute);
+            Console.WriteLine("9) Month:       " + d.Month);
+            Console.WriteLine("10) Second      " + d.Second);
+            Console.WriteLine("11) Ticks:      " + d.Ticks);
+            Console.WriteLine("12) TimeOfDay:  " + d.TimeOfDay); //é um TimeSpan
+            Console.WriteLine("13) Year:       " + d.Year);
+            Console.WriteLine();
+
+            //Formatações para DateTime
+            DateTime d1 = new DateTime(2001, 8, 15, 13, 45, 58, 598);
+
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Formatações para DateTime  :");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("   ToString():            " + d1.ToString()); //formato local da data e depois o horário (Padrão)
+            Console.WriteLine();
+            Console.WriteLine("1) ToLongDateString():    " + d1.ToLongDateString()); //converte o DateTime para string
+            Console.WriteLine("2) TooShortDateString():  " + d1.ToShortDateString()); //formato resumido
+            Console.WriteLine("3) ToLongTimeString():    " + d1.ToLongTimeString());
+            Console.WriteLine("4) ToShortTimeString():   " + d1.ToShortTimeString()); //imprime apenas hora e minuto
+            Console.WriteLine("5) Formatando ToString(): " + d1.ToString("yyyy-MM-dd HH:mm:ss") + " (manualmente)"); //Formatando um DateTime para string
+            Console.WriteLine("6) Formatando ToString(): " + d1.ToString("yyyy-MM-dd HH:mm:ss.fff") + " (com milissegundos)"); //Acrescentando milisegundos
+            Console.WriteLine();
+
+
+
+            //Operações com DateTime
+            DateTime d2 = new DateTime(2001, 10, 18, 13, 45, 58, 598);
+
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("Operações com um DateTime  :");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("   DateTime d1 =  " + d1);
+            Console.WriteLine();
+            Console.WriteLine("1) AddHours(2):   " + d1.AddHours(2));
+            Console.WriteLine("2) AddMinutes(3): " + d1.AddMinutes(3));
+            Console.WriteLine("3) AddDays(7):    " + d1.AddDays(7));
+            Console.WriteLine();
+            Console.WriteLine("   DateTime d2 =  " + d2);
+            Console.WriteLine();
+            Console.WriteLine("4) d2.Subtract(d1): " + d2.Subtract(d1));
+            Console.WriteLine();
+
+            //Fórmula de outra operações usando TimeSpan
+            //DateTime y = x.Subtract(TimeSpan);
+            //TimeSpan t = x.Subtract(DateTime);
         }
     }
 }
