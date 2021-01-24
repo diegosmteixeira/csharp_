@@ -1,0 +1,18 @@
+//Categorias de Classes:
+
+            /*
+
+             * Por questões de design tais como organização, flexibilidade, reuso,
+             * delegação, etc., há várias categorias de classes:
+             * 
+             * [Views]: Telas;
+             * 
+             * [Controllers]: O controlador faz o meio de campo entre a tela e o sistema;
+             * 
+             * [Entities]: Entidades de negócio (produtos, clientes, etc);
+             * 
+             * [Services]: Serviços;
+             * 
+             * [Repositories]: Objetos responsaveis por acessar os dados de um banco de dados ou de repositórios de dados;
+
+            */

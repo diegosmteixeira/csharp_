@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Secao 9", "Secao 9.csproj", "{65F4CF2C-DDCF-4A26-80B3-2D225BE4EABB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65F4CF2C-DDCF-4A26-80B3-2D225BE4EABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F4CF2C-DDCF-4A26-80B3-2D225BE4EABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F4CF2C-DDCF-4A26-80B3-2D225BE4EABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F4CF2C-DDCF-4A26-80B3-2D225BE4EABB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDFF0370-0C8F-4D46-B69D-761DDEFA6892}
+	EndGlobalSection
+EndGlobal
