@@ -7,16 +7,15 @@ namespace Secao10
     {
         static void Main(string[] args)
         {
+            /*
             BusinessAccount account = new BusinessAccount(8010, "Bob Brown", 100.0, 500.0);
 
             Console.WriteLine(account.Balance);
 
-            /*
-             * protected - no programa principal não é possível modificar o valor protected
-             * apenas as subclasses ou a própria classe podem alterar esse valor:
+            // protected - no programa principal não é possível modificar o valor protected
+            // apenas as subclasses ou a própria classe podem alterar esse valor:
+            // account.Balance = 200.0; //não é possível
             
-               account.Balance = 200.0; //não é possível
-            */
 
             Account acc = new Account(1001, "Alex", 0.0);
             BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500);
@@ -65,6 +64,16 @@ namespace Secao10
             //Sintaxe alternativa
 
             //BusinessAccount acc7 = acc3 as BusinessAccount;
+            */
+
+            Account acc1 = new Account(1001, "Alex", 500.0);
+            Account acc2 = new SavingsAccount(1002, "Anna", 500.0, 0.01);  //Upcasting OK
+
+            acc1.Withdraw(10.0);
+            acc2.Withdraw(10.0);
+
+            Console.WriteLine(acc1.Balance);
+            Console.WriteLine(acc2.Balance);
         }
     }
 }

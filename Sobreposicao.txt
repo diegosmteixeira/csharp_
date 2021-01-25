@@ -1,0 +1,20 @@
+
+
+[Sobreposição]
+		
+	.É a implementação de um método de uma superclasse na subclasse;
+
+	.Para que um método comum (não abstrato) possa ser sobreposto,
+	deve ser incluído nele o prefixo "virtual"
+
+	.Ao sobrescrever um método, devemos incluir nele o prefixo "override";
+
+
+		[Superclasse] = public virtual void Withdraw(double amount)
+
+		[Subclasse]   = public override void Withdraw(double amount)
+
+
+	.Palavra base
+
+		-É possível chamar a implementação da superclasse usando a palavra base.

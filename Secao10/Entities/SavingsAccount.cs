@@ -18,5 +18,11 @@
         {
             Balance += Balance * InterestRate;
         }
+
+        public override void Withdraw(double amount)
+        {
+            base.Withdraw(amount); //chamando a regra da superclasse (opcional)
+            Balance -= 2.0;
+        }
     }
 }
