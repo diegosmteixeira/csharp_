@@ -1,6 +1,6 @@
 ﻿namespace Secao10.Entities
 {
-    class SavingsAccount : Account
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
         
@@ -19,7 +19,7 @@
             Balance += Balance * InterestRate;
         }
 
-        public override void Withdraw(double amount)
+        public sealed override void Withdraw(double amount)  //sealed = essa operação não pode ser sobrescrita novamente em uma outra subclasse
         {
             base.Withdraw(amount); //chamando a regra da superclasse (opcional)
             Balance -= 2.0;
