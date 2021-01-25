@@ -92,6 +92,7 @@ namespace Secao_9
             Console.WriteLine("Income for " + monthAndYear + ": " + worker.Income(year, month).ToString("F2", CultureInfo.InvariantCulture));
             */
 
+            /*
             Comment c1 = new Comment("Have a nice trip");
             Comment c2 = new Comment("Wow that's awesome!");
             Post p1 = new Post(
@@ -117,6 +118,59 @@ namespace Secao_9
 
             Console.WriteLine(p1);
             Console.WriteLine(p2);
+            */
+
+            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("   Programa para calcular pedidos de produtos  :");
+            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine();
+
+            Console.WriteLine("Enter cliente data: ");
+            Console.WriteLine("-------------------");
+            Console.Write("Name: ");
+            string clientName = Console.ReadLine();
+            Console.Write("Email: ");
+            string email = Console.ReadLine();
+            Console.Write("Birth date (DD/MM/YYYY): ");
+            DateTime birthDate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("-----------------");
+            Console.WriteLine("Enter order data: ");
+            Console.WriteLine("-----------------");
+            Console.Write("Status: ");
+            OrderStatusProduct status = Enum.Parse<OrderStatusProduct>(Console.ReadLine());
+
+            Client client = new Client(clientName, email, birthDate);
+            OrderProduct order = new OrderProduct(DateTime.Now, status, client);
+
+            Console.WriteLine("-----------------------------");
+            Console.Write("How many items to this order? ");
+            int n = int.Parse(Console.ReadLine());
+            
+
+            for (int i = 1; i <= n; i++)
+            {
+                Console.WriteLine("-----------------------------");
+                Console.WriteLine($"Enter #{i} item data:");
+                Console.Write("Product name: ");
+                string productName = Console.ReadLine();
+                Console.Write("Product price: ");
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                Product product = new Product(productName, price);
+
+                Console.Write("Quantity: ");
+                int quantity = int.Parse(Console.ReadLine());
+
+                OrderItem orderItem = new OrderItem(quantity, price, product);
+
+                order.AddItem(orderItem);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("ORDER SUMMARY: ");
+            Console.WriteLine(order);
+            Console.WriteLine("-----------------------------");
         }
     }
 }
