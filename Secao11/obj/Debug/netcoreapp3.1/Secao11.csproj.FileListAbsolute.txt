@@ -1,0 +1,13 @@
+C:\Users\PC\Documents\Csharp\Secao11\bin\Debug\netcoreapp3.1\Secao11.exe
+C:\Users\PC\Documents\Csharp\Secao11\bin\Debug\netcoreapp3.1\Secao11.deps.json
+C:\Users\PC\Documents\Csharp\Secao11\bin\Debug\netcoreapp3.1\Secao11.runtimeconfig.json
+C:\Users\PC\Documents\Csharp\Secao11\bin\Debug\netcoreapp3.1\Secao11.runtimeconfig.dev.json
+C:\Users\PC\Documents\Csharp\Secao11\bin\Debug\netcoreapp3.1\Secao11.dll
+C:\Users\PC\Documents\Csharp\Secao11\bin\Debug\netcoreapp3.1\Secao11.pdb
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.csprojAssemblyReference.cache
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.AssemblyInfo.cs
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.dll
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.pdb
+C:\Users\PC\Documents\Csharp\Secao11\obj\Debug\netcoreapp3.1\Secao11.genruntimeconfig.cache

@@ -1,0 +1,43 @@
+
+[Estrutura try-catch]
+
+	.Bloco try
+		-Contém o código que representa a execução normal do trecho de código que
+		pode acarretar em uma exceção
+
+	.Bloco catch
+		-Contém o código a ser executado caso uma exceção ocorra
+		-Deve ser especificado o tipo da exceção a ser tratada (upcasting é permitido)
+
+	.Sintaxe
+
+	try
+	{
+	}
+	catch (ExceptionType e)
+	{
+	}
+	catch (ExceptionType e)
+	{
+	}
+	catch (ExceptionType e)
+	{
+	}
+
+	.É possível fazer um tratamento personalizado para cada tipo de exceção
+
+	    //Quando o programa pega uma exceção que não é tratada ocorre o stacktrace
+            //o programa vai quebrar e o stacktrace vai mostrar: 
+            //1. O tipo da exceção
+            //2. A mensagem padrão dela
+            //3. Aonde essa exceção ocorreu
+
+	.Stacktracing = rastreamento das chamadas das exceções.
+
+
+[Estrutura try-catch-finally]
+
+	.O bloco finally é um bloco que contém código a ser executado independentemente de
+	ter ocorrido ou não uma exceção.
+
+	.[Exemplo clássico]: fechar um arquivo ou conexão de banco de dados ao final do processamento.
