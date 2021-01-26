@@ -1,0 +1,15 @@
+
+[IOException]
+
+	.classe pertencente ao Namespace System.IO
+	.Superclasse de todas exceções possíveis quando vai trabalhar com arquivos.
+
+	.[IOException subclasses]
+
+		-DirectoryNotFoundException (diretório não existe)
+		-DriveNotFoundException
+		-EndOfStreamException
+		-FileLoadException
+		-FileNotFoundException
+		-PathTooLongException
+		-PipeException

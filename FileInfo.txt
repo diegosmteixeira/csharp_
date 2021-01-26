@@ -1,0 +1,28 @@
+
+[File, FileInfo]
+
+	.Namespace System.IO
+
+	.Realiza operações com arquivos (create, copy, delete, move, open, etc).
+	e ajuda na criação de objetos FileStream.
+
+	.FileStream = encapsula a sequência de leitura ou escrita em um recurso de entrada e saída (no caso um arquivo)
+
+
+	.[File]
+
+		-É mais simples, apenas disponibiliza operações estáticas
+		-Não é necessário instanciar um objeto (elas são estáticas)
+		-File.Operação();
+		-Apesar de mais simples ela realiza uma verificação de segurança para cada operação chamada
+		-Sendo assim, é mais lenta que a FileInfo
+
+	.[FileInfo]
+
+		-Você necessita instanciar um objeto e chamar as operações a partir dele.
+		-Esse objeto já vai estar atrelado ao arquivo que você abrir
+		-O sistema operacional será avisado disso, então essas verificações de segurança
+		não precisam ser chamadas a partir de cada operação.
+
+		Programa simples = usa File.
+		Programa complexo e performance importante = usa FileInfo.
