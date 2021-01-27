@@ -1,0 +1,34 @@
+
+
+[FileStream]
+
+	.Disponibiliza uma stream associada a um arquivo, permitindo operações
+	de leitura e escrita.
+
+	(Essa classe encapsula a associação de um objeto à um recurso de entrada e saída 
+	(no caso em tela, um arquivo)
+
+	.Um objeto FileStream trabalha com dados binários e ele pode ser instanciado de várias formas
+
+	.A classe disponibiliza vários construtores
+
+	.Ainda é possível utilizar as classes File e FileInfo para instanciar o FileStream.
+
+
+[StreamReader]
+
+	.O StreamReader é um objeto que vamos instanciar a partir do FileStream
+
+	.O StreamReader é uma Stream, e em programação a Stream significa uma sequência de dados!
+
+Stream = transmissão de dados em sequência
+
+	.StreamReader é uma stream capaz de ler caracteres a partir de uma stream binária (ex: FileStream).
+
+		- ou seja, o FileStream é uma Stream Binária, sendo que o StreamReader vai ser uma stream de caracteres.
+		Desse modo o StreamReader já vai interpretar como caracteres.
+
+	.Possui suporte a dados no formato texto.
+
+	. Um objeto StreamReader pode ser instanciado por vários construtores que a classe disponibiliza e também
+	pode ser instanciado pelas classes File e FileInfo.
