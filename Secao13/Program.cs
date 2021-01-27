@@ -118,7 +118,9 @@ namespace Secao13
                 Console.WriteLine(e.Message);
             }
         }
-        */
+            */
+
+            /*
             string path = @"c:\temp\file1.txt";
 
             try
@@ -137,6 +139,30 @@ namespace Secao13
             catch (IOException e)
             {
                 Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
+            */
+
+
+            string sourcePath = @"c:\temp\file1.txt";
+            string targetPath = @"c:\temp\file2.txt";
+
+            //Ler o file1 e salvar todo o conteúdo no fil2
+            try
+            {
+                string[] lines = File.ReadAllLines(sourcePath);
+
+                using (StreamWriter sw = File.AppendText(targetPath))
+                {
+                    foreach (string line in lines)
+                    {
+                        sw.WriteLine(line.ToUpper());
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred: ");
                 Console.WriteLine(e.Message);
             }
         }

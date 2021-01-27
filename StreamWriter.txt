@@ -1,0 +1,11 @@
+
+
+[StreamWriter]
+
+	.É uma stream capaz de escrever caracteres a partir de uma stream binária
+								(ex: FileStream)
+
+	.Suporte a dados no formato de texto.
+
+	.O StreamWriter também tem vários construtores e
+	pode ser instanciado pelo File e FileInfo.
