@@ -1,0 +1,6 @@
+
+[Path]
+
+	.Namespace System.IO
+
+	.Realiza operações com strings que contém informações de arquivos ou pastas

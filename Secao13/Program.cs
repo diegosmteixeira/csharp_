@@ -169,6 +169,7 @@ namespace Secao13
             }
             */
 
+            /*
             string path = @"c:\temp\myfolder";
 
             try
@@ -202,6 +203,19 @@ namespace Secao13
                 Console.WriteLine("An error occurred: ");
                 Console.WriteLine(e.Message);
             }
+            */
+
+            string path = @"c:\temp\myfolder\file1.txt";
+
+            Console.WriteLine("DirectorySeparatorChar: " + Path.DirectorySeparatorChar);
+            Console.WriteLine("Path.PathSeparator " + Path.PathSeparator);              //entre path diferentes o ; é utilizado para separar os path
+            Console.WriteLine("GetDirectoryName: " + Path.GetDirectoryName(path));
+            Console.WriteLine("GetDirectoryName: " + Path.GetFileName(path));
+            Console.WriteLine("Path.GetFileNameWithoutExtension: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("GetExtension: " + Path.GetExtension(path));
+            Console.WriteLine("Path.GetFUllPath: " + Path.GetFullPath(path));
+            Console.WriteLine("Path.GetTempPath: " + Path.GetTempPath());     //informa a pasta temporária do sistema na qual é possível manipular dados temporários de aplicações.
+
         }
     }
 }
