@@ -62,6 +62,7 @@ namespace Secao13
             }
             */
 
+            /*
             //Outra maneira é utilizando o File.OpenText
             string path = @"c:\temp\file1.txt";
 
@@ -89,6 +90,54 @@ namespace Secao13
                 //Como esse recurso não é gerenciado pelo CLR do .NET
                 //é necessário fechar essa Stream independente se deu certo ou não.
                 if (sr != null) sr.Close();
+            }
+            */
+
+            /*
+            string path = @"c:\temp\file1.txt";
+
+            try
+            {
+                //Tudo que for colocado no bloco será executado
+                //ao final da execução será automaticamente fechado
+                using (FileStream fs = new FileStream(path, FileMode.Open))
+                {
+                    using (StreamReader sr = new StreamReader(fs))   //um UsingBlock pode conter outro
+                    {
+                        while (!sr.EndOfStream)
+                        {
+                            string line = sr.ReadLine();
+                            Console.WriteLine(line);
+                        }
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
+            }
+        }
+        */
+            string path = @"c:\temp\file1.txt";
+
+            try
+            {
+                //Exemplo de instânciação do StreamReader de forma reduzida
+                //fazendo apenas uma instânciação com a classe file
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string line = sr.ReadLine();
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred");
+                Console.WriteLine(e.Message);
             }
         }
     }

@@ -1,0 +1,11 @@
+
+[UsingBlock]
+
+	.É uma sintaxe simplificada que garante que os objetos IDisposable serão
+	fechados.
+
+	.Objetos IDisposable NÃO são gerenciados pelo CLR. 
+
+	.IDisposible precisam ser manualmente fechados.
+
+		Exemplos: Font, FileStreasm, StreamReader, StreamWriter
