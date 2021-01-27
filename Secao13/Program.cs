@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Secao13
 {
@@ -144,6 +145,7 @@ namespace Secao13
             */
 
 
+            /*
             string sourcePath = @"c:\temp\file1.txt";
             string targetPath = @"c:\temp\file2.txt";
 
@@ -159,6 +161,41 @@ namespace Secao13
                         sw.WriteLine(line.ToUpper());
                     }
                 }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred: ");
+                Console.WriteLine(e.Message);
+            }
+            */
+
+            string path = @"c:\temp\myfolder";
+
+            try
+            {
+                //listar todas as subpastas a partir da pasta indicada
+                IEnumerable<string> folders = Directory.EnumerateDirectories(path, "*.*", SearchOption.AllDirectories);
+                //*.* = máscara de busca (qualquer nome de arquivo, qualquer extensão)
+                //AllDirectories = pastas e subpastas
+
+                //O resultado disso será uma coleção contendo os strings correspondentes as pastas
+                //Essa coleção será do tipo mais genérico IEnumerable
+
+                Console.WriteLine("FOLDERS:");
+                foreach (string s in folders)
+                {
+                    Console.WriteLine(s);
+                }
+
+                IEnumerable<string> files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+
+                Console.WriteLine("FILES:");
+                foreach (string s in files)
+                {
+                    Console.WriteLine(s);
+                }
+
+                Directory.CreateDirectory(path + "\\newfolder"); //para não colocar duas barras deve-se usar = @"\\newfolder"
             }
             catch (IOException e)
             {

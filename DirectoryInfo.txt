@@ -1,0 +1,14 @@
+
+[Directory, DirectoryInfo]
+
+	.Essas duas classes servem para fornecer operações com pastas.
+	
+	.Pertencem ao Namespace System.IO
+
+	.Operações possíveis(create, enumerate, get files, etc.).
+
+
+	.[Directory]: possui operações estáticas
+		(operação simples que faz checkagem de segurança - é mais lenta)
+
+	.DirectoryInfo: operações de instância
