@@ -9,3 +9,27 @@
 	.Para quê interfaces?
 		-Para criar sistemas com baixo acoplamento e flexíveis.
 
+----------------------------------------------
+[Inversão de controle]
+----------------------------------------------
+	.Padrão de desenvolvimento que consiste em retirar da classe a responsabilidade
+	de instanciar suas dependências
+
+----------------------------------------------
+.[Injeção de Dependência]:
+----------------------------------------------
+	.É uma forma de realizar a inversão de controle: um componente externo instancia a dependência,
+	que é então injetada no objeto "pai". Pode ser implementada de várias formas:
+
+			- Construtor
+			- Objeto de instanciação (builder/factory)
+			- Container / framework
+	
+	-> é quando um objeto é instanciado e é possível informar qual o outro objeto que ele depende).
+
+	-> Apesar de RentalService depender de ITaxService, quem vai injetar a dependência é outro lugar).
+
+	-> Essa injeção de dependência feita por outro local é um caso particular de inversão de controle.
+
+	-> O controle de quem vai ser a dependência do serviço não é feito pelo próprio serviço, 
+	mas sim por outro lugar do sistema.
