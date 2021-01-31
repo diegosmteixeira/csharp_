@@ -1,0 +1,17 @@
+
+
+[Generics]
+
+	.Permitem que classes, interfaces e métodos possam ser parametrizados por tipo.
+
+		Seus benefícios são:
+			-Reuso  (Trabalhar com tipos diferentes)
+			-Type safety (tipos seguros sem quebras em tempo de execução)
+			-Performance (garantir que não hajam boxing e unboxings desnecessários)
+
+	.Uso comum: coleções.
+
+	List<string> list = new List<string>();
+	list.Add("Maria")
+	string name = list[0];
+	
