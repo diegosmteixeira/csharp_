@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using Secao15.Entities;
-using System.Globalization;
 
 namespace Secao15
 {
@@ -26,7 +24,7 @@ namespace Secao15
             printService.Print();
             Console.WriteLine();
             Console.WriteLine("First: " + printService.First());
-            */
+            
 
             List<Product> list = new List<Product>();
 
@@ -55,7 +53,33 @@ namespace Secao15
             //where T : new()     -que tenha um construtor
             //where T : <base type name>   -de qualquer outro tipo
             //where T : U   -outro tipo genérico que tenha definido na classe
+            */
 
+            string a = "Maria";
+            string b = "Alex";
+
+            Console.WriteLine("a = b :" + a.Equals(b));
+            Console.WriteLine("a = a :" + a.Equals(a));
+
+            //Gera um HashCode diferente a cada execução
+            Console.WriteLine("a Hash :" + a.GetHashCode());
+            Console.WriteLine("b Hash:" + b.GetHashCode());
+
+            //Exemplo com emails diferentes
+            Client c1 = new Client { Name = "Maria", Email = "maria@gmail.com" };
+            Client c2 = new Client { Name = "Alex", Email = "alex@gmail.com" };
+
+            Console.WriteLine("São iguais? (Alex e Maria com emails diferentes): " + c1.Equals(c2));
+
+            //Exemplo com emails iguais
+            Client c3 = new Client { Name = "Maria", Email = "maria@gmail.com" };
+            Client c4 = new Client { Name = "Alex", Email = "maria@gmail.com" };
+
+            //Responde True, pois o critério de comparação foi o email
+            Console.WriteLine("São iguais? (Alex e Maria com emails iguais): " + c3.Equals(c4));
+
+            //Porém == retorna false, pois ele leva em consideração a 'referência de ponteiro de memória'
+            Console.WriteLine("São iguais? c3 e c4? Não, pela referência de ponteiro de memória:" + (c3 == c4));
         }
     }
 }
