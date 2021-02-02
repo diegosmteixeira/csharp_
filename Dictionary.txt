@@ -1,0 +1,41 @@
+
+
+[Dictionary e SortedDictionary]
+
+	.Em outras linguagens de programação é conhecido como Map (mapa de chave valor)
+
+	
+
+	Dictionary<TKey, TValue>
+
+	.É uma coleção de pares chave / valor
+
+		-Não admite repetições do objeto chave
+		-Os elementos são indexados pelo objeto chave (não possuem posição)
+		-Acesso, inserção e remoção de elementos são rápidos
+
+	.Uso comum: cookies, local storage(html5), qualquer modelo chave-valor
+
+:Diferenças:
+
+	.[Dictionary]
+
+		-Armazenamento em tabela hash
+		-Extremamente rápido: inserção, remoção e busca de Ordem (1)
+		-A ordem dos elementos não é garantida
+
+	.[SortedDictionary]
+
+		-Armazenamento em árvore
+		-Rápido: inserção, remoção e busca em Ordem Logarítimica (log(n))
+		-Os elementos são armazenados ordenadamente conforme implementação IComparer<T>
+
+	Alguns métodos importantes:
+
+		.dictionary[key] - acessa o elemento pela chave informada
+		.Add(key, value) - adiciona elemento [salvo se repetido]
+		.Clear() - esvazia a coleção
+		.Count - quantidade de elementos
+		.ContainsKey(key) - verifica se a dada chave existe
+		.ContainsValue(value) verifica se o dado valor existe
+		.Remove(key) - remove um elemento pela chave

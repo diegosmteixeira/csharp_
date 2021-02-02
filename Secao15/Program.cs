@@ -84,6 +84,7 @@ namespace Secao15
             Console.WriteLine("São iguais? c3 e c4? Não, pela referência de ponteiro de memória:" + (c3 == c4));
             */
 
+            /*
             HashSet<string> set = new HashSet<string>();
 
             set.Add("TV");
@@ -130,6 +131,36 @@ namespace Secao15
                 Console.Write(obj + " ");
             }
             Console.WriteLine();
+        }
+        */
+
+            Dictionary<string, string> cookies = new Dictionary<string, string>();
+
+            cookies["user"] = "maria";
+            cookies["email"] = "maria@gmail.com";
+            cookies["phone"] = "99712334";
+
+            Console.WriteLine(cookies["email"]);
+            Console.WriteLine(cookies["phone"]);
+
+            cookies.Remove("email");
+
+            if (cookies.ContainsKey("email"))
+            {
+                Console.WriteLine(cookies["email"]);
+            }
+            else
+            {
+                Console.WriteLine("There is no 'email' key");
+            }
+
+            Console.WriteLine("Size : " + cookies.Count);
+
+            Console.WriteLine("ALL COOKIES: ");
+            foreach(KeyValuePair<string, string> item in cookies)    //é possível colocar (var item in cookies)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
         }
     }
 }
