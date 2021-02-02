@@ -1,5 +1,6 @@
 ﻿using System;
 using Secao15.Entities;
+using System.Collections.Generic;
 
 namespace Secao15
 {
@@ -55,6 +56,7 @@ namespace Secao15
             //where T : U   -outro tipo genérico que tenha definido na classe
             */
 
+            /*
             string a = "Maria";
             string b = "Alex";
 
@@ -80,6 +82,54 @@ namespace Secao15
 
             //Porém == retorna false, pois ele leva em consideração a 'referência de ponteiro de memória'
             Console.WriteLine("São iguais? c3 e c4? Não, pela referência de ponteiro de memória:" + (c3 == c4));
+            */
+
+            HashSet<string> set = new HashSet<string>();
+
+            set.Add("TV");
+            set.Add("Notebook");
+            set.Add("Tablet");
+
+            Console.WriteLine(set.Contains("Notebook")); //retorna true avisando que o elemento está contido no conjunto
+
+            foreach (string p in set)
+            {
+                Console.WriteLine(p);
+            }
+            Console.WriteLine();
+
+
+            SortedSet<int> a = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 10 };
+            SortedSet<int> b = new SortedSet<int>() { 5, 6, 7, 8, 9, 10 };
+
+            PrintCollection(a);
+
+            //Union - união entre conjuntos
+            SortedSet<int> c = new SortedSet<int>(a); //instancia e já insere todos os elementos de a
+            c.UnionWith(b);
+
+            Console.WriteLine();
+
+            //Intersection - interseção entre conjuntos
+            SortedSet<int> d = new SortedSet<int>(a);
+            d.IntersectWith(b);
+            PrintCollection(d);
+            Console.WriteLine();
+
+            //Difference - diferença entre conjuntos
+            SortedSet<int> e = new SortedSet<int>(a);
+            e.ExceptWith(b);
+            PrintCollection(e);
+        }
+
+        //IEnumerable é uma interface implementada por todas as coleções básicas do system.Collections
+        static void PrintCollection<T>(IEnumerable<T> collection)
+        {
+            foreach (T obj in collection)
+            {
+                Console.Write(obj + " ");
+            }
+            Console.WriteLine();
         }
     }
 }

@@ -1,0 +1,44 @@
+
+:Conjutos:
+
+	HashSet<T> e SortedSet<T>
+
+	.Representa um conjunto de elementos (similar ao da Álgebra)
+
+		-Não admite repetições
+		-Elementos não possuem posição
+		-Acesso, inserção e remoção de elementos são rápidos
+
+		-Oferece operações eficientes de conjunto:
+
+			a) interseção
+			b) união
+			c) diferença
+
+:Diferenças:
+
+	[HashSet]
+		-Armazenamento em tabela hash
+		-Extremamente rápido: inserção, remoção e busca Ordem de(1) "um passo"
+		-A ordem dos elementos não é garantida (ao fazer uma impressão não há garantia de que sairão na ordem).
+
+	[SortedSet]
+		-Armazenamento em árvore
+		-Rápido: inserção, remoção e busca Ordem de (log(n))
+			exemplo: árvore binária (log de n na base 2)
+
+		-Os elementos são armazenados ordenadamente conforme implementação do IComparer<T>
+
+
+:Métodos:
+
+	.Add
+	.Clear
+	.Contains
+	.UnionWith(other) - operação de união: adiciona no conjunto os elementos do outro conjunto, sem repetição.
+	.IntersectWith(other) - operação interseção: remove do conjunto os elementos não contidos em other
+	.ExceptWith(other) - operação diferença: remove do conjunto os elementos contidos em other
+	.Remove(T)
+	.RemoveWhere(predicate) - remove todos os elementos que satisfaçam o predicado
+
+
