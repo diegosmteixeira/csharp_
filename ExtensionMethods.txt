@@ -1,0 +1,12 @@
+
+[Extension Methods]
+
+	.São métodos que estendem a funcionalidade de um tipo, sem precisar alterar o código fonte deste tipo,
+	nem herdar desse tipo.
+
+	.Como são feitos os Extension Methods:
+
+		- Criar uma classe estática
+		- Na classe, se cria um método estático
+		- O primeiro parâmetro do método deverá ter o prefixo this, seguido da declaração de um
+		parâmetro do tipo que se deseja estender. Esta será uma referência para o próprio objeto.
