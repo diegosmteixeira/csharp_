@@ -1,0 +1,21 @@
+
+[Delegates]
+
+	.É uma referência (com type safety) para um ou mais métodos
+
+		-É tipo uma referência
+		*Delegate é um tipo (assim como Classe, Struct, etc)
+
+	.Usos comuns:
+
+		-Comunicação entre objetos de forma flexível e extensível (eventos/callbacks)
+		-Parametrização de operações por métodos (programação funcional)
+			passar uma função como parâmetro para outra função (o parâmetro será do tipo delegate)
+
+[Delegates pré-definidos]
+
+	.Action
+
+	.Func
+
+	.Predicate
