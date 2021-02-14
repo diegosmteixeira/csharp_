@@ -1,0 +1,21 @@
+
+[LINQ - Language Integrated Query]
+
+	.É um conjunto de tecnologias baseadas na integração de funcionalidades de consulta diretamente na linguagem C#
+
+		-Operações chamadas diretamente a partir das coleções
+		-Consultas são bojetos da primeira classe
+		-Suporte do compilador e IntelliSense da IDE (O compilador te ajuda a escrever corretamente)!
+
+	.Namespace:System.Linq
+	
+	.Possui diversas operações de consulta, cujos parâmetros tipicamente são expressões
+	lambda ou expressões de sintaxe similar à SQL.
+
+
+	.Tres passos:
+
+		-Criar um data source (coleção, array, recurso de E/S, etc)
+		-Definir a query
+		-Executar a query (foreach ou alguma operação terminal) - alguma operação que vai forçar a consulta a ser executada.
+	(Princípio da execução tardia - 'lazy') = somente quando executar uma operação que precisa dos dados é que a consulta será executada.

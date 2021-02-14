@@ -1,14 +1,18 @@
 ﻿using System;
 using Secao17.Services;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Secao17
 {
+
     delegate double BinaryNumericOperation(double n1, double n2);
     delegate void BinaryNumericOperationMulticast(double n1, double n2);
     class Program
     {
         static void Main(string[] args)
         {
+            /*
             double a = 10;
             double b = 12;
 
@@ -38,6 +42,21 @@ namespace Secao17
             op3.Invoke(a, b);
             //ou sintaxe alternativa:
             op3(a, b);
+            */
+
+            // Specify the data source
+            int[] numbers = new int[] { 2, 3, 4, 5 }; //poderia ser um arquivo, banco de dados, etc.
+
+            // Define the query expression
+            IEnumerable<int> result = numbers  //as bibliotecas preferem gerar resultados mais genéricos (IEnumerable) que é compatível com as demais funções de coleção
+                .Where(x => x % 2 == 0)
+                .Select(x => x * 10);
+
+            // Execute the query
+            foreach (int x in result)
+            {
+                Console.WriteLine(x);
+            }
         }
     }
 }
